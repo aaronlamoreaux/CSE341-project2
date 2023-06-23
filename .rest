@@ -1,0 +1,28 @@
+//local host
+GET http://localhost:8080/
+###
+POST http://localhost:8080/ HTTP/1.1 
+content-type: application/json
+
+{
+    "quote": "may the force be with you.",
+    "source": "various, Star Wars franchise"
+}
+###
+
+PUT http://localhost:8080/648cd15a3508ffa026b3d0e3 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Amy",
+    "lastName": "Lamoreaux",
+    "email": "Amy@test.com",
+    "favoriteColor": "purple",
+    "birthday": "12/10/2002"
+}
+###
+
+DELETE http://localhost:8080/648e8ed1c5da47bf7fab2cfc HTTP/1.1
+
+###
+//render
