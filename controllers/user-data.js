@@ -24,7 +24,7 @@ const getSingle = async (req, res) => {
       res.status(200).json(lists[0]);
     });
   } catch {
-    res.status(500).json(result.error || 'Some error occurred while trying to reach the database.');
+    res.status(500).json(res.error || 'Some error occurred while trying to reach the database.');
   }
 };
 
