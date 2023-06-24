@@ -1,17 +1,40 @@
 //local host
 GET http://localhost:8080/
 ###
-GET http://localhost:8080/6496214d62e7699f26fb8d50
+GET http://localhost:8080/649634fad8ecea742357f3bb
 ###
 POST http://localhost:8080/ HTTP/1.1 
 content-type: application/json
 
 {
-    "quote": "May the force be with you.",
-    "source": "various, Star Wars"
+    "firstName": "Aaron",
+    "lastName": "Lamoreaux",
+    "email": "lam22013@byui.edu",
+    "phoneNumber": "7024613019",
+    "password": "******",
+    "bookDescription": "an ordinary quote book",
+    "favoriteQuote": "I find you lack of faith disturbing -Darth Vader, Star Wars"
+}
+###
+PUT http://localhost:8080/64963e23f24f2d66e58dabee HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Alan",
+    "lastName": "Lamoreaux",
+    "email": "lam22013@byui.edu",
+    "phoneNumber": "7024613019",
+    "password": "******",
+    "bookDescription": "an ordinary quote book",
+    "favoriteQuote": "I find you lack of faith disturbing -Darth Vader, Star Wars"
 }
 
 ###
+DELETE http://localhost:8080/64963e23f24f2d66e58dabee HTTP/1.1
+###
+GET http://localhost:8080/quote/
+###
+GET http://localhost:8080/quote/64963eccd8ecea742357f3c0 
 //render
 GET https://cse341-project2-aaronlamoreaux.onrender.com/
 ###

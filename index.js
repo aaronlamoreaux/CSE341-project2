@@ -15,11 +15,9 @@ app
     next();
   })
   .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
-  .use(
-    express.urlencoded({
-      extended: true
-    })
-  )
+  .use(express.urlencoded({
+    extended: true
+  }))
   .use('/', require('./routes'));
 
 mongodb.initDb((err) => {
