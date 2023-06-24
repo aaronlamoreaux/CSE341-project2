@@ -23,46 +23,6 @@
             "description": "OK"
           }
         }
-      },
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "firstName": {
-                  "example": "any"
-                },
-                "lastName": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "phoneNumber": {
-                  "example": "any"
-                },
-                "password": {
-                  "example": "any"
-                },
-                "bookDescription": {
-                  "example": "any"
-                },
-                "favoriteQuote": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
-          }
-        }
       }
     },
     "/user/{id}": {
@@ -71,17 +31,55 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      }
+    },
+    "/user/register": {
+      "post": {
+        "description": "",
+        "parameters": [{
+          "name": "body",
+          "in": "body",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "firstName": {
+                "example": " "
+              },
+              "lastName": {
+                "example": " "
+              },
+              "email": {
+                "example": " "
+              },
+              "phoneNumber": {
+                "example": " "
+              },
+              "password": {
+                "example": " "
+              },
+              "bookDescription": {
+                "example": " "
+              },
+              "favoriteQuote": {
+                "example": " "
+              }
+            }
+          }
+        }],
+        "responses": {
+          "201": {
+            "description": "Created"
           }
         }
       }
@@ -101,26 +99,24 @@
       },
       "post": {
         "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "quote": {
-                  "example": "any"
-                },
-                "source": {
-                  "example": "any"
-                },
-                "category": {
-                  "example": "any"
-                }
+        "parameters": [{
+          "name": "body",
+          "in": "body",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "quote": {
+                "example": " "
+              },
+              "source": {
+                "example": " "
+              },
+              "category": {
+                "example": " "
               }
             }
           }
-        ],
+        }],
         "responses": {
           "201": {
             "description": "Created"
@@ -134,14 +130,12 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
         "responses": {
           "200": {
             "description": "OK"
